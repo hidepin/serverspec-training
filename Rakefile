@@ -18,6 +18,7 @@ namespace :spec do
     RSpec::Core::RakeTask.new(target.to_sym) do |t|
       ENV['TARGET_HOST'] = target
       t.pattern = "spec/default/*_spec.rb"
+      t.fail_on_error = false
     end
   end
 end
